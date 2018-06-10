@@ -23,7 +23,7 @@ bot.on('messageReactionAdd', function(reaction, users) {
     var Welcome = bot.channels.find("name", "welcome");
     var messageid = global;
     var Emoji = "✅";
-    var rolenews = reaction.message.guild.roles.find("name", "agreed");
+    var rolenews = reaction.message.guild.roles.find("name", "Member");
     if (!reaction.message == global) return;
     if (!reaction.emoji.name == Emoji) return;
     reaction.message.guild.members.get(users.id).addRole(rolenews);
@@ -34,7 +34,7 @@ bot.on('messageReactionRemove', function(reaction, users) {
     var Welcome = bot.channels.find("name", "welcome");
     var messageid = global;
     var Emoji = "✅";
-    var rolenews = reaction.message.guild.roles.find("name", "agreed");
+    var rolenews = reaction.message.guild.roles.find("name", "Member");
     if (!reaction.message == global) return;
     if (!reaction.emoji.name == Emoji) return;
     reaction.message.guild.members.get(users.id).removeRole(rolenews);
