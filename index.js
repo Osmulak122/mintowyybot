@@ -15,7 +15,7 @@ bot.on("guildMemberAdd", function(member) {
 bot.on("ready", function() {
     bot.user.setActivity('m1nty.eu');
     console.log("Im Ready!");
-    global = bot.channels.find("name", "welcome").fetchMessage("455423491152412694");
+    global = bot.channels.find("name", "welcome").fetchMessage("455429301567750166");
 });
     
 bot.on('messageReactionAdd', function(reaction, users) {
