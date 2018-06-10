@@ -46,8 +46,7 @@ bot.on("message", function(message) {
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     var msgauthor = message.author;
-    var channel1 = bot.channels.find('name', 'readme');
-    var rcchanel = bot.channels.find("name", "recruitments");
+   
 
     
 });
