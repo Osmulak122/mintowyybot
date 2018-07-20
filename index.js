@@ -27,10 +27,10 @@ bot.on('messageReactionAdd', function(reaction, users) {
     var freegames = reaction.message.guild.roles.find("name", "Free Games");
     var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
     var artifact = reaction.message.guild.roles.find("name", "Artifact");
+    if (reaction.channel == Welcome) {
     if (reaction.message == global) {
     reaction.message.guild.members.get(users.id).addRole(rolenews);
-    }
-    if ((reaction.message != global)&&(reaction.channel == Welcome)) {
+    } else {
         if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
             reaction.message.guild.members.get(users.id).addRole(freegames);
         }
@@ -40,6 +40,7 @@ bot.on('messageReactionAdd', function(reaction, users) {
         if (reaction.emoji.name == bot.emojis.find("name","artifact")) {
             reaction.message.guild.members.get(users.id).addRole(artifact);
         }
+      }
     }
 });
 
@@ -52,7 +53,8 @@ bot.on('messageReactionRemove', function(reaction, users) {
     var freegames = reaction.message.guild.roles.find("name", "Free Games");
     var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
     var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    if ((reaction.message == global)&&(reaction.channel == Welcome)) {
+    
+    if (reaction.message == global) {
     reaction.message.guild.members.get(users.id).removeRole(rolenews);
     }
     if ((reaction.message != global)&&(reaction.channel == Welcome)) {
