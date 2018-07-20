@@ -20,17 +20,17 @@ bot.on("ready", function() {
     
 bot.on('messageReactionAdd', function(reaction, users) {
     console.log("kebab")
-    var Welcome = bot.channels.find("name", "welcome");
+    const Welcome = bot.channels.find("name", "welcome");
     var messageid = global;
     var Emoji = "✅";
     var rolenews = reaction.message.guild.roles.find("name", "Member");
     var freegames = reaction.message.guild.roles.find("name", "Free Games");
     var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
     var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    if ((reaction.message == global)&&(reaction.channel == welcome)) {
+    if ((reaction.message == global)&&(reaction.channel == Welcome)) {
     reaction.message.guild.members.get(users.id).addRole(rolenews);
     }
-    if ((reaction.message != global)&&(reaction.channel == welcome)) {
+    if ((reaction.message != global)&&(reaction.channel == Welcome)) {
         if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
             reaction.message.guild.members.get(users.id).addRole(freegames);
         }
@@ -52,10 +52,10 @@ bot.on('messageReactionRemove', function(reaction, users) {
     var freegames = reaction.message.guild.roles.find("name", "Free Games");
     var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
     var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    if ((reaction.message == global)&&(reaction.channel == welcome)) {
+    if ((reaction.message == global)&&(reaction.channel == Welcome)) {
     reaction.message.guild.members.get(users.id).removeRole(rolenews);
     }
-    if ((reaction.message != global)&&(reaction.channel == welcome)) {
+    if ((reaction.message != global)&&(reaction.channel == Welcome)) {
         if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
             reaction.message.guild.members.get(users.id).removeRole(freegames);
         }
@@ -76,9 +76,10 @@ bot.on("message", function(message) {
     var msgauthor = message.author;
     
     if (msg == prefix + "fix") {
-        message.id("469913655824089098").react(bot.emojis.find("name", "steam"))
-        message.id("469913655824089098").react(bot.emojis.find("name", "fortnite"))
-        message.id("469913655824089098").react(bot.emojis.find("name", "artifact"))
+        var msid = bot.channels.find("name", "welcome").fetchMessage("469913655824089098")
+        msid.react(bot.emojis.find("name", "steam"))
+        msid.react(bot.emojis.find("name", "fortnite"))
+        msid.react(bot.emojis.find("name", "artifact"))
         
         message.delete();
     }
