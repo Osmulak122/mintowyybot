@@ -77,9 +77,9 @@ bot.on("message", function(message) {
     
     if (msg == prefix + "fix") {
         var idmsg = "469913655824089098"
-        message.id(idmsg).react(message.emoji.name == bot.emojis.find("name", "steam"))
-        message.id(idmsg).react(message.emoji.name == bot.emojis.find("name", "fortnite"))
-        message.id(idmsg).react(message.emoji.name == bot.emojis.find("name", "artifact"))
+        idmsg.react(message.emoji.name == bot.emojis.find("name", "steam"))
+        idmsg.react(message.emoji.name == bot.emojis.find("name", "fortnite"))
+        idmsg.react(message.emoji.name == bot.emojis.find("name", "artifact"))
         
         message.delete();
     }
