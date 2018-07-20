@@ -75,13 +75,6 @@ bot.on("message", function(message) {
     var args = cont.slice(1);
     var msgauthor = message.author;
     
-    if (msg == prefix + "fix") {
-        bot.channels.find("name", "welcome").fetchMessage("469913655824089098").message.react(bot.emojis.find("name", "steam"))
-        bot.channels.find("name", "welcome").fetchMessage("469913655824089098").message.react(bot.emojis.find("name", "fortnite"))
-        bot.channels.find("name", "welcome").fetchMessage("469913655824089098").message.react(bot.emojis.find("name", "artifact"))
-        
-        message.delete();
-    }
 });
 
 bot.login(process.env.BOT_TOKEN);
