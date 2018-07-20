@@ -76,7 +76,7 @@ bot.on("message", function(message) {
     var msgauthor = message.author;
     
     if (msg == prefix + "fix") {
-        var idmsg == "469913655824089098"
+        var idmsg = "469913655824089098"
         message(idmsg).react(message.emoji.name == bot.emojis.find("name", "steam"))
         message(idmsg).react(message.emoji.name == bot.emojis.find("name", "fortnite"))
         message(idmsg).react(message.emoji.name == bot.emojis.find("name", "artifact"))
