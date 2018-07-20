@@ -27,7 +27,7 @@ bot.on('messageReactionAdd', function(reaction, users) {
     var freegames = reaction.message.guild.roles.find("name", "Free Games");
     var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
     var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    if ((reaction.message == global)&&(reaction.channel == Welcome)) {
+    if (reaction.message == global) {
     reaction.message.guild.members.get(users.id).addRole(rolenews);
     }
     if ((reaction.message != global)&&(reaction.channel == Welcome)) {
