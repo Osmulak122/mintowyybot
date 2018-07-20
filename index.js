@@ -77,9 +77,9 @@ bot.on("message", function(message) {
     
     if (msg == prefix + "fix") {
         var msid = bot.channels.find("name", "welcome").fetchMessage("469913655824089098")
-        msid.react(bot.emojis.find("name", "steam"))
-        msid.react(bot.emojis.find("name", "fortnite"))
-        msid.react(bot.emojis.find("name", "artifact"))
+        message(msid).react(bot.emojis.find("name", "steam"))
+        message(msid).react(bot.emojis.find("name", "fortnite"))
+        message(msid).react(bot.emojis.find("name", "artifact"))
         
         message.delete();
     }
