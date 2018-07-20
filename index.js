@@ -30,7 +30,8 @@ bot.on('messageReactionAdd', function(reaction, users) {
     if (reaction.channel == Welcome) {
     if (reaction.message == global) {
     reaction.message.guild.members.get(users.id).addRole(rolenews);
-    } else {
+    }
+    if (!reaction.message == global) {
         if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
             reaction.message.guild.members.get(users.id).addRole(freegames);
         }
