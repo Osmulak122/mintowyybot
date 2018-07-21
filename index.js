@@ -20,29 +20,13 @@ bot.on("ready", function() {
     
 bot.on('messageReactionAdd', function(reaction, users) {
     console.log("kebab")
-    const Welcome = bot.channels.find("name", "welcome");
+    var Welcome = bot.channels.find("name", "welcome");
     var messageid = global;
     var Emoji = "✅";
     var rolenews = reaction.message.guild.roles.find("name", "Member");
-    var freegames = reaction.message.guild.roles.find("name", "Free Games");
-    var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
-    var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    if (reaction.channel == Welcome) {
-    if (reaction.message == global) {
+    if (!reaction.message == global) return;
+    if (!reaction.emoji.name == Emoji) return;
     reaction.message.guild.members.get(users.id).addRole(rolenews);
-    }
-    if (!reaction.message == global) {
-        if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
-            reaction.message.guild.members.get(users.id).addRole(freegames);
-        }
-        if (reaction.emoji.name == bot.emojis.find("name","fortnite")) {
-            reaction.message.guild.members.get(users.id).addRole(fortnite);
-        }
-        if (reaction.emoji.name == bot.emojis.find("name","artifact")) {
-            reaction.message.guild.members.get(users.id).addRole(artifact);
-        }
-      }
-    }
 });
 
 bot.on('messageReactionRemove', function(reaction, users) {
@@ -51,24 +35,9 @@ bot.on('messageReactionRemove', function(reaction, users) {
     var messageid = global;
     var Emoji = "✅";
     var rolenews = reaction.message.guild.roles.find("name", "Member");
-    var freegames = reaction.message.guild.roles.find("name", "Free Games");
-    var fortnite = reaction.message.guild.roles.find("name", "Fortnite");
-    var artifact = reaction.message.guild.roles.find("name", "Artifact");
-    
-    if (reaction.message == global) {
+    if (!reaction.message == global) return;
+    if (!reaction.emoji.name == Emoji) return;
     reaction.message.guild.members.get(users.id).removeRole(rolenews);
-    }
-    if ((reaction.message != global)&&(reaction.channel == Welcome)) {
-        if (reaction.emoji.name == bot.emojis.find("name", "steam")) {
-            reaction.message.guild.members.get(users.id).removeRole(freegames);
-        }
-        if (reaction.emoji.name == bot.emojis.find("name","fortnite")) {
-            reaction.message.guild.members.get(users.id).removeRole(fortnite);
-        }
-        if (reaction.emoji.name == bot.emojis.find("name","artifact")) {
-            reaction.message.guild.members.get(users.id).removeRole(artifact);
-        }
-    }
 });
 
 bot.on("message", function(message) {
@@ -77,6 +46,8 @@ bot.on("message", function(message) {
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     var msgauthor = message.author;
+   
+
     
 });
 
