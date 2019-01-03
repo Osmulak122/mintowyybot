@@ -118,7 +118,7 @@ bot.on("message", function(message) {
         message.author.send(rcembed);
         message.author.send("Thank you for sending your application, it will be reviewed by leaders as soon as possible");
     } else {
-        return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*/n/n MIN 1 and MAX 10 links can be provided!/n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '");
+        return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*\n\n MIN 1 and MAX 10 links can be provided!\n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '");
         }
 } 
     
