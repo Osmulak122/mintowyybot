@@ -49,7 +49,7 @@ bot.on("message", function(message) {
     var msgauthor = message.author;
     var rcchanel = bot.channels.find("name", "recruitments");
     
-    if (msg.startsWith(prefix + "access")); {
+    if (msg.startsWith(prefix + "access")) {
         var scythe = message.member.guild.roles.find("name","tester");
         message.delete();
         message.member.addRole(scythe);
