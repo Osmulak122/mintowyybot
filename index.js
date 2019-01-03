@@ -116,7 +116,7 @@ bot.on("message", function(message) {
 
         bot.channels.find("name", "applications").send(rcembed);
         message.author.send(rcembed);
-        message.author.send("Thats a preview of bot generated application made by you, which was sent to directly to leaders!");
+        message.author.send("Thank you for sending your application, it will be reviewed by leaders as soon as possible");
     } else {
         return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*/n/n MIN 1 and MAX 10 links can be provided!/n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '");
         }
