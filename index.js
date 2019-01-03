@@ -42,7 +42,7 @@ bot.on('messageReactionRemove', function(reaction, users) {
 
 bot.on("message", function(message) {
 
-    var scythe = bot.roles.find("name","tester");
+    
     var msg = message.content.toLowerCase();
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
@@ -50,8 +50,9 @@ bot.on("message", function(message) {
     var rcchanel = bot.channels.find("name", "recruitments");
     
     if (msg.startsWith(prefix + "access")); {
+        var scythe = message.member.guild.roles.find("name","tester");
         message.delete();
-        message.author.addRole(scythe);
+        message.member.addRole(scythe);
     }
     //recruitments
     
