@@ -46,8 +46,7 @@ bot.on("message", function(message) {
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     var msgauthor = message.author;
-
-    var rcchanel = message.guild.channels.find("name", "recruitments");
+    var rcchanel = bot.channels.find("name", "recruitments");
    
     if (message.channel == rcchanel) {
         message.delete();
@@ -116,7 +115,6 @@ bot.on("message", function(message) {
         .setThumbnail(message.author.avatarURL)
 
         bot.channels.find("name", "applications").send(rcembed);
-        message.author.send("Preview of your application which already has been sent to Leaders!");
         message.author.send(rcembed);
     } else {
         return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*/n/n MIN 1 and MAX 10 links can be provided!/n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '");
