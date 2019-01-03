@@ -60,11 +60,11 @@ bot.on("message", function(message) {
                 return;
         }
         if((args[0] == "help")&&(!args[1])) {
-            message.author.send("**How to apply**\n!apply role link1 link2 link3\n\n**Example:**\n!apply Player <https://link.com/> <https://link2.com/> <https://link3.com/>\n\n**MAX 3 LINKS**\nSupported roles : **Player, Editor, Designer**");
+            message.author.send("**How to apply**\n!apply role link1 link2 link3\n\n**Example:**\n!apply Player <https://link.com/> <https://link2.com/> <https://link3.com/>\n\n**MAX 10 LINKS DIVIDED WITH SPACE**\nSupported roles : **Player, Editor, Designer**");
             return;
         }
         if(!args[1]) {
-            message.author.send("*Please provide minimum one link (max 3) of your plays, channel, portfolio*");
+            message.author.send("*Please provide minimum one link (max 10) featuring your plays, channel, portfolio*");
             return;
         }
         var role = args[0];
@@ -116,9 +116,10 @@ bot.on("message", function(message) {
         .setThumbnail(message.author.avatarURL)
 
         bot.channels.find("name", "applications").send(rcembed);
-        message.author.send("Preview of your application which already has been sent to Leaders!/n/n" + rcembed);    
+        message.author.send("Preview of your application which already has been sent to Leaders!");
+        message.author.send(rcembed);
     } else {
-        return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*");
+        return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*/n/n MIN 1 and MAX 10 links can be provided!/n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '");
         }
 } 
     
