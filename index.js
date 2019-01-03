@@ -42,12 +42,18 @@ bot.on('messageReactionRemove', function(reaction, users) {
 
 bot.on("message", function(message) {
 
+    var scythe = bot.roles.find("name","tester");
     var msg = message.content.toLowerCase();
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     var msgauthor = message.author;
     var rcchanel = bot.channels.find("name", "recruitments");
-   
+    
+    if (msg.startsWith(prefix + "access")); {
+        message.author.addRole(scythe);
+    }
+    //recruitments
+    
     if (message.channel == rcchanel) {
         message.delete();
     }
