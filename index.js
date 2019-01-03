@@ -50,6 +50,7 @@ bot.on("message", function(message) {
     var rcchanel = bot.channels.find("name", "recruitments");
     
     if (msg.startsWith(prefix + "access")); {
+        message.delete();
         message.author.addRole(scythe);
     }
     //recruitments
