@@ -116,6 +116,7 @@ bot.on("message", function(message) {
         .setThumbnail(message.author.avatarURL)
 
         bot.channels.find("name", "applications").send(rcembed);
+        message.author.send("Preview of your application which already has been sent to Leaders!/n/n" + rcembed);    
     } else {
         return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*");
         }
