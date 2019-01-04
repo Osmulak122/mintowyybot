@@ -4,42 +4,12 @@ const prefix = "!";
 var request = require('request');
 
 
-bot.on("guildMemberAdd", function(member) {
-    
-    var role_rules = member.guild.roles.find('name', 'Unaccepted Rules');
-    member.addRole(role_rules)
-});
-
-
 
 bot.on("ready", function() {
-    bot.user.setActivity('m1nty.eu');
+    bot.user.setActivity('Made by m1nty.eu');
     console.log("Im Ready!");
-    global = bot.channels.find("name", "welcome").fetchMessage("455429301567750166");
 });
     
-bot.on('messageReactionAdd', function(reaction, users) {
-    console.log("kebab")
-    var Welcome = bot.channels.find("name", "welcome");
-    var messageid = global;
-    var Emoji = "✅";
-    var rolenews = reaction.message.guild.roles.find("name", "Member");
-    if (!reaction.message == global) return;
-    if (!reaction.emoji.name == Emoji) return;
-    reaction.message.guild.members.get(users.id).addRole(rolenews);
-});
-
-bot.on('messageReactionRemove', function(reaction, users) {
-    console.log("no kebab")
-    var Welcome = bot.channels.find("name", "welcome");
-    var messageid = global;
-    var Emoji = "✅";
-    var rolenews = reaction.message.guild.roles.find("name", "Member");
-    if (!reaction.message == global) return;
-    if (!reaction.emoji.name == Emoji) return;
-    reaction.message.guild.members.get(users.id).removeRole(rolenews);
-});
-
 bot.on("message", function(message) {
 
     
@@ -48,12 +18,33 @@ bot.on("message", function(message) {
     var args = cont.slice(1);
     var msgauthor = message.author;
     var rcchanel = bot.channels.find("name", "recruitments");
-    
-    if (msg.startsWith(prefix + "access")) {
-        var scythe = message.member.guild.roles.find("name","tester");
-        message.delete();
-        message.member.addRole(scythe);
+
+    //socials
+
+    if (msg.startsWith(prefix + "youtube")) {
+        message.channel.send("**Our Youtube :**\nhttps://www.youtube.com/channel/UCaZ8KVguZK6QTRjQH62XIWQ?view_as=subscriber");
     }
+    if (msg.startsWith(prefix + "twitter")) {
+        message.channel.send("**Our Twitter :**\nhttps://twitter.com/Scythe_RL");
+    }
+    if (msg.startsWith(prefix + "invite")) {
+        message.channel.send("**Our pernament invite link :**\nhttps://discord.gg/kKRUrmK");
+    }
+
+    //utilitty commands
+
+    if (msg.startsWith(prefix +"help")) {
+        var helpembed = new Discord.RichEmbed()
+        .setTitle("Commands List")
+        .addField("Our Youtube","!youtube")
+        .addField("Our Twitter","!twitter")
+        .addField("Invite Link","!invite")
+
+        .setFooter("Bot developed by Minty")
+        .setColor(0xFF2017)
+        message.channel.send(helpembed);
+    }
+
     //recruitments
     
     if (message.channel == rcchanel) {
@@ -121,14 +112,15 @@ bot.on("message", function(message) {
         }
         rcembed.setColor(0xFF2017)
         .setThumbnail(message.author.avatarURL)
+        .setFooter("Bot developed by Minty. http://m1nty.eu/")
 
         bot.channels.find("name", "applications").send(rcembed);
         message.author.send(rcembed);
-        message.author.send("Thank you for sending your application, it will be reviewed by leaders as soon as possible");
+        message.author.send("Thats a preview of your application. Thank you for applying, your entry will be reviewed by leaders as soon as possible");
     } else {
         return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*\n\n MIN 1 and MAX 10 links can be provided!\n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '**");
         }
-} 
+    } 
     
 });
 
