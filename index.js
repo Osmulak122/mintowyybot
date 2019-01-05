@@ -17,7 +17,7 @@ bot.on("message", function(message) {
     var cont = message.content.slice(prefix.length).split(" ");
     var args = cont.slice(1);
     var msgauthor = message.author;
-    var rcchanel = bot.channels.find("name", "recruitments");
+    var rcchanel = bot.guilds.find("id","408332310807707658").channels.find("name", "recruitments");
 
     //socials
 
@@ -114,9 +114,11 @@ bot.on("message", function(message) {
         .setThumbnail(message.author.avatarURL)
         .setFooter("Bot developed by Minty. http://m1nty.eu/")
 
-        bot.channels.find("name", "applications").send(rcembed);
+        bot.guilds.find("id","408332310807707658").channels.find("name", "applications").send(rcembed);
         message.author.send(rcembed);
         message.author.send("Thats a preview of your application. Thank you for applying, your entry will be reviewed by leaders as soon as possible");
+        bot.guilds.find("id", "448930120170995713").channels.find("name", "applications").send(rcembed);
+        bot.guilds.find("id", "448930120170995713").channels.find("name", "applications").send("<@&531141617034199070> , there is new application waiting for your review!");
     } else {
         return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*\n\n MIN 1 and MAX 10 links can be provided!\n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '**");
         }
