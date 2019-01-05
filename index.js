@@ -47,6 +47,13 @@ bot.on("message", function(message) {
 
     //recruitments
     
+    if (message.channel == bot.guilds.find("id", "448930120170995713").channels.find("name", "applications")) {
+        if (message.author.equals(bot.user)) {
+        message.react("✅");
+        message.react("❌");
+        }
+}
+
     if (message.channel == rcchanel) {
         message.delete();
     }
