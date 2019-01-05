@@ -49,6 +49,10 @@ bot.on("message", function(message) {
     
     if (message.channel == bot.guilds.find("id", "448930120170995713").channels.find("name", "applications")) {
         if (message.author.equals(bot.user)) {
+            if (message.content == "<@&531141617034199070> , there is new application waiting for your review!")
+            {
+                return
+            }
         message.react("✅");
         message.react("❌");
         }
