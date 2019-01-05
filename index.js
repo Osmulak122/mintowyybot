@@ -32,6 +32,10 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    
+    if (msg.startsWith(prefix +"karre")) {
+        message.channel.send("U can't apply as retard"); 
+       } 
 
     if (msg.startsWith(prefix +"help")) {
         var helpembed = new Discord.RichEmbed()
