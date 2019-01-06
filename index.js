@@ -64,7 +64,7 @@ if(msg.startsWith(prefix + "request")) {
     if (message.guild == bot.guilds.find("id", "448930120170995713")) {
         var type = args[0];
     if(type.toLowerCase() == ("avi" || "header")) {
-        bot.guilds.find("id", "448930120170995713").message.channel.find("name","designing-projects").send(message.member + " is looking for " + type);
+        bot.guilds.find("id", "448930120170995713").channels.find("name","designing-projects").send(message.member + " is looking for " + type);
         }
     }
 }
