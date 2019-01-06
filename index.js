@@ -32,6 +32,11 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    if (msg.startsWith(prefix+"gay")) {
+        message.delete();
+        var gay = message.guild.member(message.mentions.users.first());
+        message.channel.send("<@!"+gay.id+">"+" is fucking gay");
+    }
     if (msg.startsWith(prefix+"copypaste")) {
         message.channel.send("https://pastebin.com/DC9Prm8u");
        }
