@@ -31,12 +31,12 @@ bot.on("message", function(message) {
         message.channel.send("**Our pernament invite link :**\nhttps://discord.gg/kKRUrmK");
     }
     if (msg.startsWith(prefix+"socials")) {
-        if (!args[0]) {
-            message.channel.send("Available socials :\ntriguizz, minty");
-        }
         var scmb = args[0]
+        if (!args[0]) {
+            return message.channel.send("Available socials :\ntriguizz, minty");
+    }       
     if (scmb = "minty") {
-        return message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
+        message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
     }
     if (scmb = "triguizz") {
         message.channel.send(`**Socials of ${scmb} :**`+"\n<https://twitter.com/TriGuizz\>n<https://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w>\n<https://steamcommunity.com/id/TriGuizz/>");
