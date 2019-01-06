@@ -36,13 +36,11 @@ bot.on("message", function(message) {
             return message.channel.send("Available socials :\ntriguizz, minty");
     }       
     if (scmb == "minty") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
+        message.channel.send(`**Socials of ${scmb} :**`+"\nhttp://m1nty.eu/\nhttp://twitter.m1nty.eu/\nhttp://youtube.m1nty.eu/");
     }
     if (scmb == "triguizz") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://twitter.com/TriGuizz\>n<https://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w>\n<https://steamcommunity.com/id/TriGuizz/>");
-    } else {
-        message.channel.send("Incorrect format : !socials *nickname*");
-    }
+        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://twitter.com/TriGuizz>\n<https://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w>\n<https://steamcommunity.com/id/TriGuizz/>");
+    } 
     }
 
     //utilitty commands
