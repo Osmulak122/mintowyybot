@@ -30,6 +30,20 @@ bot.on("message", function(message) {
     if (msg.startsWith(prefix + "invite")) {
         message.channel.send("**Our pernament invite link :**\nhttps://discord.gg/kKRUrmK");
     }
+    if (msg.startsWith(prefix+"socials")) {
+        if (!args[0]) {
+            message.channel.send("Available socials :\ntriguizz, minty");
+        }
+        var scmb = args[0]
+    if (scmb = "minty") {
+        message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
+    }
+    if (scmb = "triguizz") {
+        message.channel.send(`**Socials of ${scmb} :**`+"\nhttps://twitter.com/TriGuizz\nhttps://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w\nhttps://steamcommunity.com/id/TriGuizz/");
+    }
+    } else {
+        message.channel.send("Incorrect format : !socials *nickname*");
+    }
 
     //utilitty commands
     if(msg.startsWith(prefix + "clear")) {
