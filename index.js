@@ -33,8 +33,11 @@ bot.on("message", function(message) {
     if (msg.startsWith(prefix+"socials")) {
         var scmb = args[0]
         if (!args[0]) {
-            return message.channel.send("Available socials :\ntriguizz, minty");
-    }       
+            return message.channel.send("Available socials :\ncorokku, triguizz, minty");
+    }
+    if (scmb == "corokku") {
+        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://www.youtube.com/c/Corokku>\n<https://twitter.com/Corokku132>\n<https://steamcommunity.com/id/Corokku/>");
+    }    
     if (scmb == "minty") {
         message.channel.send(`**Socials of ${scmb} :**`+"\n<http://m1nty.eu/>\n<http://twitter.m1nty.eu/>\n<http://youtube.m1nty.eu/>");
     }
