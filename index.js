@@ -142,6 +142,9 @@ if (msg.startsWith(prefix+"copypaste")) {
 if (msg.startsWith(prefix +"karre")) {
     message.channel.send("U can't apply as retard"); 
    } 
+if (msg.startsWith(prefix +"gameslion")) {
+    message.channel.send("Quack"); 
+   } 
 
 if (msg.startsWith(prefix +"help")) {
     var helpembed = new Discord.RichEmbed()
