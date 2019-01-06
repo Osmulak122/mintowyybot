@@ -32,6 +32,20 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    if(msg.startsWith(prefix + "serverinfo")) {
+            var sicon = message.guild.iconURL;
+            var serverinfoembed = new Discord.RichEmbed()
+                .setAuthor(message.guild.name, sicon)
+                .setColor(0x0047B2)
+                .setThumbnail(sicon)
+                .addField("Name", message.guild.name,true)
+                .addField("ServerID",message.guild.id,true)
+                .addField("Owner", message.guild.owner.user.tag,true)
+                .addField("Members", message.guild.memberCount,true)
+                .setFooter("Server Created: " + message.guild.createdAt, sicon)
+
+            message.channel.send(serverinfoembed);
+}
     if (msg.startsWith(prefix+"everyone")) {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No");
         let botmessage1 = args.join(" ");
