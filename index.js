@@ -32,6 +32,12 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    if (msg.startsWith(prefix+"say")) {
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No");
+        let botmessage = args.join(" ");
+        message.delete().catch();
+        message.channel.send(botmessage);
+    }
     if (msg.startsWith(prefix+"gay")) {
         message.delete();
         var gay = message.guild.member(message.mentions.users.first());
