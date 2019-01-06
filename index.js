@@ -36,20 +36,23 @@ bot.on("message", function(message) {
             return message.channel.send("Available socials :\ncorokku, revolgr, triguizz, minty, truxy");
     }
     if (scmb == "corokku") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://www.youtube.com/c/Corokku>\n<https://twitter.com/Corokku132>\n<https://steamcommunity.com/id/Corokku/>");
+        message.channel.send(`**Socials of ${scmb} :**`+"\n**Youtube** <https://www.youtube.com/c/Corokku>\n**Twitter**<https://twitter.com/Corokku132>\n**Steam** <https://steamcommunity.com/id/Corokku/>");
     }    
     if (scmb == "minty") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\n<http://m1nty.eu/>\n<http://twitter.m1nty.eu/>\n<http://youtube.m1nty.eu/>");
+        message.channel.send(`**Socials of ${scmb} :**`+"\n**Portfolio** <http://m1nty.eu/>\n**Twitter** <http://twitter.m1nty.eu/>\n**Youtube** <http://youtube.m1nty.eu/>");
     }
     if (scmb == "revolgr") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://twitter.com/revolgrrl?>\n<https://www.youtube.com/channel/UC95gWF7aD-dP-6dAwDeauuA>\n<https://steamcommunity.com/id/revolgrrl/>");
+        message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter** <https://twitter.com/revolgrrl?>\n**Youtube** <https://www.youtube.com/channel/UC95gWF7aD-dP-6dAwDeauuA>\n**Steam** <https://steamcommunity.com/id/revolgrrl/>");
     }
     if (scmb == "truxy") {
-    message.channel.send(`**Socials of ${scmb} :**`+"\n<https://discord.gg/raqQznB>\n<https://www.youtube.com/channel/UCIKbcWXJ_o_DHmkMer_nD7A>\n<https://twitter.com/TruxyRL>");
+    message.channel.send(`**Socials of ${scmb} :**`+"\n**Discord** <https://discord.gg/raqQznB>\n**Youtube** <https://www.youtube.com/channel/UCIKbcWXJ_o_DHmkMer_nD7A>\n**Twitter** <https://twitter.com/TruxyRL>");
     }
     if (scmb == "triguizz") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\n<https://twitter.com/TriGuizz>\n<https://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w>\n<https://steamcommunity.com/id/TriGuizz/>");
-    } 
+        message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter** <https://twitter.com/TriGuizz>\n**Youtube** <https://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w>\n**Steam **<https://steamcommunity.com/id/TriGuizz/>");
+    }
+    if (scmb == "sydeline") {
+    message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter** <https://www.twitter.com/sydeline2>\n**Youtube** <https://www.youtube.com/channel/UCAtIs-qBg4ggl6kzWQTMgiQ>\n**Twitch** <https://www.twitch.tv/sydeline2/>");
+    }
     }
 
     //utilitty commands
