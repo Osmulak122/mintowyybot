@@ -39,8 +39,12 @@ bot.on("message", function(message) {
     }
     if (msg.startsWith(prefix+"kys")) {
         message.delete();
+        if (!args[0]) {
+            message.channel.send("kys!");
+        } else {
         var gay = message.guild.member(message.mentions.users.first());
         message.channel.send("kys "+"<@!"+gay.id+">"+"!");
+        }
     }
     if (msg.startsWith(prefix+"copypaste")) {
         message.channel.send("https://pastebin.com/DC9Prm8u");
