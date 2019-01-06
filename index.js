@@ -36,7 +36,7 @@ bot.on("message", function(message) {
         }
         var scmb = args[0]
     if (scmb = "minty") {
-        message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
+        return message.channel.send(`**Socials of ${scmb} :**`+"\nm1nty.eu/\ntwitter.m1nty.eu/\nyoutube.m1nty.eu/");
     }
     if (scmb = "triguizz") {
         message.channel.send(`**Socials of ${scmb} :**`+"\nhttps://twitter.com/TriGuizz\nhttps://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w\nhttps://steamcommunity.com/id/TriGuizz/");
