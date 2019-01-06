@@ -32,7 +32,9 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
-    
+    if (msg.startsWith(prefix+"copypaste")) {
+        message.channel.send("https://pastebin.com/DC9Prm8u");
+       }
     if (msg.startsWith(prefix +"karre")) {
         message.channel.send("U can't apply as retard"); 
        } 
