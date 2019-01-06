@@ -37,6 +37,11 @@ bot.on("message", function(message) {
         var gay = message.guild.member(message.mentions.users.first());
         message.channel.send("<@!"+gay.id+">"+" is fucking gay");
     }
+    if (msg.startsWith(prefix+"kys")) {
+        message.delete();
+        var gay = message.guild.member(message.mentions.users.first());
+        message.channel.send("kys "+"<@!"+gay.id+">"+"!");
+    }
     if (msg.startsWith(prefix+"copypaste")) {
         message.channel.send("https://pastebin.com/DC9Prm8u");
        }
