@@ -8,6 +8,7 @@ var request = require('request');
 bot.on("ready", function() {
 bot.user.setActivity('Made by m1nty.eu');
 console.log("Im Ready!");
+bot.guilds.find("id","408332310807707658").members.find("id","160669529507233792").send("Im ready!");
 });
 
 bot.on("message", function(message) {
