@@ -40,9 +40,9 @@ bot.on("message", function(message) {
     }
     if (scmb = "triguizz") {
         message.channel.send(`**Socials of ${scmb} :**`+"\nhttps://twitter.com/TriGuizz\nhttps://www.youtube.com/channel/UC5Q1S26eV3ivO2gmLldCN6w\nhttps://steamcommunity.com/id/TriGuizz/");
-    }
     } else {
         message.channel.send("Incorrect format : !socials *nickname*");
+    }
     }
 
     //utilitty commands
