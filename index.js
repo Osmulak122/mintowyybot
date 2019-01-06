@@ -33,7 +33,7 @@ bot.on("message", function(message) {
     if (msg.startsWith(prefix+"socials")) {
         var scmb = args[0]
         if (!args[0]) {
-            return message.channel.send("Available socials :\ncorokku, revolgr, triguizz, minty, truxy, sydeline");
+            return message.channel.send("Available socials :\ncorokku, revolgr, triguizz, minty, truxy, sydeline, kalyn");
     }
     if (scmb == "corokku") {
         message.channel.send(`**Socials of ${scmb} :**`+"\n**Youtube :** <https://www.youtube.com/c/Corokku>\n**Twitter :**<https://twitter.com/Corokku132>\n**Steam :** <https://steamcommunity.com/id/Corokku/>");
@@ -53,9 +53,20 @@ bot.on("message", function(message) {
     if (scmb == "sydeline") {
     message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter :** <https://www.twitter.com/sydeline2>\n**Youtube :** <https://www.youtube.com/channel/UCAtIs-qBg4ggl6kzWQTMgiQ>\n**Twitch :** <https://www.twitch.tv/sydeline2/>");
     }
+    if (scmb == "kalyn") {
+    message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter :** <https://www.twitter.com/kalynvisuals>\n**Youtube :** <https://www.youtube.com/c/sharingan>\n**Twitch :** <https://www.twitch.tv/kalynrl/>");
     }
 
     //utilitty commands
+    if(msg.startsWith(prefix + "request")) {  
+        if (message.guild == bot.guilds.find("id", "448930120170995713")) {
+            var type = args[0];
+        if(type.toLowerCase() == ("avi" || "header")) {
+            bot.guilds.find("id", "448930120170995713").message.channel.find("name","designing-projects").send(message.member + " is looking for " + type);
+            }
+        }
+    }
+    
     if(msg.startsWith(prefix + "clear")) {
 
 
