@@ -32,6 +32,12 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    if (msg.startsWith(prefix+"everyone")) {
+        if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No");
+        let botmessage1 = args.join(" ");
+        message.delete().catch();
+        message.channel.send(message.mentions.everyone+", "+botmessage1);
+    }
     if (msg.startsWith(prefix+"say")) {
         if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("No");
         let botmessage = args.join(" ");
