@@ -63,7 +63,7 @@ message.channel.send(`**Socials of ${scmb} :**`+"\n**Twitter :** <https://www.tw
 if(msg.startsWith(prefix + "request")) {  
     if (message.guild == bot.guilds.find("id", "448930120170995713")) {
         var type = args[0];
-    if(type.toLowerCase() == ("avi" || "header")) {
+    if(args[0]) {
         bot.guilds.find("id", "448930120170995713").channels.find("name","designing-projects").send(message.member + " is looking for " + type);
         }
     }
