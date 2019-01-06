@@ -32,6 +32,33 @@ bot.on("message", function(message) {
     }
 
     //utilitty commands
+    if(msg.startsWith(prefix + "clear")) {
+
+
+        var channelID = message.channel;
+
+        async function clear() {
+            message.delete();
+
+            if (!message.member.hasPermission("MANAGE_MESSAGES")) {
+                message.channel.send("You don't have permissions to use this command!");
+                return;
+            }
+
+            if (isNaN(args[0])) {
+                message.channel.send("**Please include amount of messages you want to delete**");
+                return;
+            }
+
+            const fetched = await message.channel.fetchMessages({limit: args[0]});
+            message.channel.bulkDelete(fetched)
+                .catch(error => message.channel.send("Can't clear the chat!"));
+
+                bot.channels.find("name", "logs").send(msgauthor.username + "** cleared : **" + (fetched.size) + "** messages in channel :** " + (channelID));
+
+ }
+        clear();
+}
     if(msg.startsWith(prefix + "serverinfo")) {
             var sicon = message.guild.iconURL;
             var serverinfoembed = new Discord.RichEmbed()
