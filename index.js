@@ -131,7 +131,7 @@ if (msg.startsWith(prefix+"say")) {
 if (msg.startsWith(prefix+"gay")) {
     message.delete();
     var gay = message.guild.member(message.mentions.users.first());
-    message.channel.send("<@!"+gay.id+">"+" is fucking gay");
+    message.channel.send(gay+" is fucking gay");
 }
 if (msg.startsWith(prefix+"kys")) {
     message.delete();
