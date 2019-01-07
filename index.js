@@ -194,49 +194,13 @@ if(message.channel == rcchanel) {
     }
     var role = args[0];
 
-
-    var link1 = args[1];
-    var link2 = args[2] || "Not provided";
-    var link3 = args[3] || "Not provided";
-    var link4 = args[4] || "Not provided";
-    var link5 = args[5] || "Not provided";
-    var link6 = args[6] || "Not provided";
-    var link7 = args[7] || "Not provided";
-    var link8 = args[8] || "Not provided";
-    var link9 = args[9] || "Not provided";
-    var link10 = args[10] || "Not provided";
-
     let rcembed = new Discord.RichEmbed()
     .setTitle(`New application as ${role}`)
     .setAuthor(message.author.tag)
-    .addField("Link #1",link1)
-    if (args[2]) {
-        rcembed.addField("Link #2",link2)
+    for (let i = 1; i <= 10; i++) {
+        rcembed.addField("Link #" + i, args[i] || "Not provided");
     }
-    if (args[3]) {
-        rcembed.addField("Link #3",link3)
-    }
-    if (args[4]) {
-        rcembed.addField("Link #4",link4)
-    }
-    if (args[5]) {
-        rcembed.addField("Link #5",link5)
-    }
-    if (args[6]) {
-        rcembed.addField("Link #6",link6)
-    }
-    if (args[7]) {
-        rcembed.addField("Link #7",link7)
-    }
-    if (args[8]) {
-        rcembed.addField("Link #8",link8)
-    }
-    if (args[9]) {
-        rcembed.addField("Link #9",link9)
-    }
-    if (args[10]) {
-        rcembed.addField("Link #10",link10)
-    }
+
     rcembed.setColor(0xFF2017)
     .setThumbnail(message.author.avatarURL)
     .setFooter("Bot developed by Minty. http://m1nty.eu/")
