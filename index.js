@@ -10,7 +10,9 @@ const socials = {
     minty: { YouTube: "http://youtube.m1nty.eu/" , Twitter: "http://twitter.m1nty.eu/", Portfolio: "http://m1nty.eu" },
     truxy: { YouTube: "https://www.youtube.com/channel/UCIKbcWXJ_o_DHmkMer_nD7A", Twitter: "https://twitter.com/TruxyRL", Discord: "https://discord.gg/raqQznB" },
     sydeline: { YouTube: "https://www.youtube.com/channel/UCAtIs-qBg4ggl6kzWQTMgiQ", Twitter: "https://www.twitter.com/sydeline2", Twitch: "https://www.twitch.tv/sydeline2/" },
-    kalyn: { YouTube: "https://www.youtube.com/c/sharingan", Twitter: "https://www.twitter.com/kalynvisuals", Twitch: "https://www.twitch.tv/kalynrl/" }
+    kalyn: { YouTube: "https://www.youtube.com/c/sharingan", Twitter: "https://www.twitter.com/kalynvisuals", Twitch: "https://www.twitch.tv/kalynrl/" },
+    kevituz: { Twitter: "https://twitter.com/KevituZ_", Steam: "https://steamcommunity.com/id/KevituZ" },
+    mina: { YouTube: "https://www.youtube.com/channel/UCdm_kBef0ZfMK8x9QKRuBhw", Twitter: "https://www.twitter.com/GFXMina", Portfolio: "https://www.behance.net/mminacorin9df3" }
 };
 
 bot.on("ready", function() {
