@@ -63,6 +63,9 @@ if (scmb == "kevituz") {
 if (scmb == "mina") {
     message.channel.send(`**Socials of ${scmb} :**`+"\n**Portfolio :** <https://www.behance.net/mminacorin9df3>\n**Twitter :** <https://www.twitter.com/GFXMina> \n**Youtube :** <https://www.youtube.com/channel/UCdm_kBef0ZfMK8x9QKRuBhw?view_as=subscriber>");
 }
+if (scmb == "merch") {
+    message.channel.send(`**Socials of ${scmb} :**`+"\n**Portfolio :** <https://www.behance.net/merchgfx>\n**Twitter :** <https://www.twitter.com/MerchEdits> \n**Youtube :** <https://www.youtube.com/c/MerchEdits>");
+}
 }
 
 //utilitty commands
