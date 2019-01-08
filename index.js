@@ -34,7 +34,7 @@ if (msg.startsWith(prefix + "invite")) {
 if (msg.startsWith(prefix+"socials")) {
     var scmb = args[0]
     if (!args[0]) {
-        return message.channel.send("Available socials :\ncorokku, triguizz, mina, revolgr, minty, kalyn, kevituz, sydeline, truxy");
+        return message.channel.send("Available socials :\ncorokku, triguizz, mina, revolgr, minty, kalyn, kevituz, merch, sydeline, truxy");
 }
 if (scmb == "corokku") {
     message.channel.send(`**Socials of ${scmb} :**`+"\n**Youtube :** <https://www.youtube.com/c/Corokku>\n**Twitter :** <https://twitter.com/Corokku132>\n**Steam :** <https://steamcommunity.com/id/Corokku/>");
