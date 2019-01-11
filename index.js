@@ -256,7 +256,7 @@ if(message.channel == rcchanel) {
 } 
 //other commands
     if(msg.startsWith(prefix + "doggo")) {
-        let {body} = yield superagent
+        let {body} = await superagent
         .get("https://random.dog/woof.json");
 
         let dogembed = new Discord.RichEmbed()
@@ -266,7 +266,7 @@ if(message.channel == rcchanel) {
         message.channel.send(dogembed);
     }
     if(msg.startsWith(prefix + "cat")) {
-        let {body} = yield superagent
+        let {body} = await superagent
         .get("random.cat/meow");
 
         let catembed = new Discord.RichEmbed()
