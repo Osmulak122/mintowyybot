@@ -1,4 +1,5 @@
 const Discord = require('discord.js');
+const superagent = require('superagent');
 var bot = new Discord.Client();
 const prefix = "!";
 var request = require('request');
@@ -253,7 +254,27 @@ if(message.channel == rcchanel) {
     return message.author.send("**Incorrect format**, try again!\n!apply role link1 link2 link3\n\nExample : *!apply Player <https://link.com> <https://link2.com> <https://link3.com>*\n\n MIN 1 and MAX 10 links can be provided!\n**DIVIDE EVERY SINGLE WORD/LINK WITH SPACE ' '**");
     }
 } 
+//other commands
+    if(msg.startsWith(prefix + "doggo")) {
+        let {body} = await superagent
+        .get("https://random.dog/woof.json");
 
+        let dogembed = new Discord.RichEmbed()
+        .setColor(0xFF2017)
+        .setTitle("Doggo!")
+        .setImage(body.url)
+        message.channel.send(dogembed);
+    }
+    if(msg.startsWith(prefix + "cat")) {
+        let {body} = await superagent
+        .get("random.cat/meow");
+
+        let catembed = new Discord.RichEmbed()
+        .setColor(0xFF2017)
+        .setTitle("Cat!")
+        .setImage(body.file)
+        message.channel.send(catembed);
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
