@@ -21,12 +21,7 @@ var msgauthor = message.author;
 var rcchanel = bot.guilds.find("id","408332310807707658").channels.find("name", "recruitments");
 
 //socials
-if (msg.startsWith(prefix + "4freez")) {
-    message.delete();
-    bot.guilds.find("id","408332310807707658").members.forEach((member) =>
-    member.send("FreeZ Community server got hacked, 200 members were removed by hacker, make sure to enable 2FA and rejoin them here https://discord.gg/z4RCrqn")
-  );
-}
+
 if (msg.startsWith(prefix + "youtube")) {
     message.channel.send("**Our Youtube :**\nhttps://www.youtube.com/channel/UCaZ8KVguZK6QTRjQH62XIWQ?view_as=subscriber");
 }
