@@ -7,6 +7,8 @@ var request = require('request');
 
 
 bot.on("ready", function() {
+console.log("Im Ready!");
+bot.guilds.find("id","408332310807707658").members.find("id","160669529507233792").send("Im ready!");
 bot.user.setStatus('dnd')
 bot.user.setPresence({
     game: {
@@ -14,8 +16,7 @@ bot.user.setPresence({
         type: "STREAMING",
         url: "https://www.twitch.tv/mintowyy"
     }
-console.log("Im Ready!");
-bot.guilds.find("id","408332310807707658").members.find("id","160669529507233792").send("Im ready!");
+    });
 });
 
 bot.on("message", function(message) {
