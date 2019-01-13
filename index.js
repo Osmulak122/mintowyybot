@@ -12,9 +12,9 @@ bot.guilds.find("id","408332310807707658").members.find("id","160669529507233792
 bot.user.setStatus('dnd')
 bot.user.setPresence({
     game: {
-        name: 'm1nty.eu',
+        name: 'www.twitch.tv/teamscytherl',
         type: "STREAMING",
-        url: "https://www.twitch.tv/mintowyy"
+        url: "https://www.twitch.tv/teamscytherl"
     }
     });
 });
